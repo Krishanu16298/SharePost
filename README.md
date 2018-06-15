@@ -1,6 +1,6 @@
-# PostMVC
-PostMVC PHP custom Framework
+# SharePost
+Share your Posts with this app
 ---
-This is a custom PHP framework made by me.
+This is an app built on a custom PHP framework made by me.
 
 Tutor : Brad Traversy @ udemy.com
