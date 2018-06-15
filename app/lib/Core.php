@@ -10,7 +10,6 @@
 
             if(file_exists('../app/controllers/'.$url[0].'.php')){
                 $this->currentController = ucwords($url[0]);
-
                 unset($url[0]);
             }
 
@@ -18,9 +17,11 @@
 
             $this->currentController = new $this->currentController;
 
-            if(method_exists($this->currentController, $url[1])){
-                $this->currentMethod = $url[1];
-                unset($url[1]);
+            if(isset($url[1])){
+                if(method_exists($this->currentController, $url[1])){
+                    $this->currentMethod = $url[1];
+                    unset($url[1]);
+                }
             }
             // echo $this->currentMethod;
             $this->params = $url ? array_values($url) : [];
